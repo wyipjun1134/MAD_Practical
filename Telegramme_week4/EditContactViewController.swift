@@ -37,6 +37,7 @@ class EditContactViewController: UIViewController {
         appDelegate.contactList[appDelegate.editRow].mobileNo = mobileFld.text!;
          
         _ = navigationController?.popViewController(animated: true)
+        
        }
         else
        {

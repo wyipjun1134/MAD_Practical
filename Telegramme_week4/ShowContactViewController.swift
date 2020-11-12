@@ -38,7 +38,7 @@ class ShowContactViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         let contact = appDelegate.contactList[indexPath.row]
         cell.textLabel!.text = "\(contact.firstName) \(contact.lastName)"
-        print("\(contact.mobileNo)")
+       // print("\(contact.mobileNo)")
        
         cell.detailTextLabel!.text = "\(contact.mobileNo)"
         // Configure the cell...
