@@ -27,12 +27,15 @@ class AddContactViewController: UIViewController {
         mobileFld.text = ""
     }
     @IBAction func createBtn(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        print(String(appDelegate.contactList.count))
+        //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+       // print(String(appDelegate.contactList.count))
        if (firstNameFld.text != "" || lastNameFld.text != "" || mobileFld.text != "")
         {
-            let c = Contact.init(firstname: firstNameFld.text!, lastname: lastNameFld.text!, mobileno: mobileFld.text!)
-            appDelegate.contactList.append(c)
+       
+        
+          let con = Contact.init(firstname: firstNameFld.text!, lastname: lastNameFld.text!, mobileno: mobileFld.text!)
+        ContactController().AddContact(newContact: con)
+          //  appDelegate.contactList.append(c)
        
         
         let alert = UIAlertController(title: "Contact Added", message: "Contact \(firstNameFld.text!) \( lastNameFld.text!) has been added successfully.", preferredStyle: UIAlertController.Style.alert)

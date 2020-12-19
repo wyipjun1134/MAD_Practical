@@ -14,27 +14,32 @@ class EditContactViewController: UIViewController {
     @IBOutlet weak var mobileFld: UITextField!
     @IBOutlet weak var lastNameFld: UITextField!
     @IBOutlet weak var firstNameFld: UITextField!
+    var contactList: [Contact] = []
     override func viewDidLoad() {
-        
+       
+      
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        mobileFld.text =  appDelegate.contactList[appDelegate.editRow].mobileNo
-        lastNameFld.text = appDelegate.contactList[appDelegate.editRow].lastName
-        firstNameFld.text =  appDelegate.contactList[appDelegate.editRow].firstName
+        contactList = ContactController().RetrieveAllContact()
+        mobileFld.text =  contactList[appDelegate.editRow].mobileNo
+        lastNameFld.text = contactList[appDelegate.editRow].lastName
+        firstNameFld.text =  contactList[appDelegate.editRow].firstName
     }
 
 
     
     @IBAction func doneBtn(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        print(String(appDelegate.contactList.count))
+        //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        print(String(contactList.count))
        if (firstNameFld.text != "" || lastNameFld.text != "" || mobileFld.text != "")
         {
-           // let c = Contact.init(firstname: firstNameFld.text!, lastname: lastNameFld.text!, mobileno: mobileFld.text!)
+           let c = Contact.init(firstname: firstNameFld.text!, lastname: lastNameFld.text!, mobileno: mobileFld.text!)
             //appDelegate.contactList.append(c)
-        appDelegate.contactList[appDelegate.editRow].firstName = firstNameFld.text!;
-        appDelegate.contactList[appDelegate.editRow].lastName = lastNameFld.text!;
-        appDelegate.contactList[appDelegate.editRow].mobileNo = mobileFld.text!;
+        ContactController().updateContact(mobilemo: contactList[appDelegate.editRow].mobileNo, newContact: c)
+        
+        //contactList[appDelegate.editRow].firstName = firstNameFld.text!;
+        //contactList[appDelegate.editRow].lastName = lastNameFld.text!;
+       //contactList[appDelegate.editRow].mobileNo = mobileFld.text!;
          
         _ = navigationController?.popViewController(animated: true)
         

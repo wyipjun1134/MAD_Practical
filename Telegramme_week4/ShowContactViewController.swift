@@ -8,19 +8,25 @@
 import UIKit
 
 class ShowContactViewController: UITableViewController {
+    var contactList: [Contact] = []
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
+        contactList = ContactController().RetrieveAllContact()
         self.tableView.reloadData()
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+       
+       
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
     override func viewDidAppear(_ animated: Bool) {
+        contactList = ContactController().RetrieveAllContact()
         self.tableView.reloadData();
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -30,13 +36,13 @@ class ShowContactViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return appDelegate.contactList.count
+        return contactList.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
-        let contact = appDelegate.contactList[indexPath.row]
+        let contact = contactList[indexPath.row]
         cell.textLabel!.text = "\(contact.firstName) \(contact.lastName)"
        // print("\(contact.mobileNo)")
        
@@ -74,7 +80,8 @@ class ShowContactViewController: UITableViewController {
         
         if editingStyle == .delete {
             // Delete the row from the data source
-            appDelegate.contactList.remove(at: indexPath.row)
+            ContactController().deleteContact(mobilemo: contactList[indexPath.row].mobileNo)
+            contactList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
         } else if editingStyle == .insert {
