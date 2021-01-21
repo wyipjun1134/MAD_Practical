@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57327B1B25BA1ED2005F946B /* CLGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57327B1A25BA1ED2005F946B /* CLGeocoder.swift */; };
 		5785C886255CC9C00022AE87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785C885255CC9C00022AE87 /* AppDelegate.swift */; };
 		5785C888255CC9C00022AE87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785C887255CC9C00022AE87 /* SceneDelegate.swift */; };
 		5785C88A255CC9C00022AE87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785C889255CC9C00022AE87 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57327B1A25BA1ED2005F946B /* CLGeocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLGeocoder.swift; sourceTree = "<group>"; };
 		5785C882255CC9C00022AE87 /* Telegramme_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telegramme_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5785C885255CC9C00022AE87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5785C887255CC9C00022AE87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				5785C88E255CC9C20022AE87 /* Assets.xcassets */,
 				5785C890255CC9C20022AE87 /* LaunchScreen.storyboard */,
 				5785C893255CC9C20022AE87 /* Info.plist */,
+				57327B1A25BA1ED2005F946B /* CLGeocoder.swift */,
 			);
 			path = Telegramme_week4;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57327B1B25BA1ED2005F946B /* CLGeocoder.swift in Sources */,
 				5785C88A255CC9C00022AE87 /* ViewController.swift in Sources */,
 				5785C89E255CCF6B0022AE87 /* AddContactViewController.swift in Sources */,
 				57CF8548256F3F90006B46C9 /* Telegramme.xcdatamodeld in Sources */,

@@ -2,7 +2,7 @@
 //  MapViewController.swift
 //  Telegramme_week4
 //
-//  Created by Yip jun wei on 21/1/21.
+//  Created by Yip jun wei on 7/1/21.
 //
 
 import UIKit
@@ -27,10 +27,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 1.333149, longitude: 103.774893)
-        annotation.title = "Ngee Ann Polytechnic"
-        mapView.addAnnotation(annotation)
+        
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString("535 Clementi Road Singapore 599489", completionHandler:
+            {(p,e) in
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = CLLocationCoordinate2D(latitude: p![0].location!.coordinate.latitude, longitude: p![0].location!.coordinate.longitude)
+                annotation.title = "Ngee Ann Polytechnic"
+                self.mapView.addAnnotation(annotation)
+                
+             //   let coord = CLLocationCoordinate2D(latitude: p![0].location!.coordinate.latitude, longitude: p![0].location!.coordinate.longitude)
+            })
+     
+        
         // Do any additional setup after loading the view.
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
