@@ -91,17 +91,18 @@
                     <connections>
                         <segue destination="JHg-Dm-aLT" kind="relationship" relationship="viewControllers" id="Err-5o-VfX"/>
                         <segue destination="aYe-UV-OBK" kind="relationship" relationship="viewControllers" id="cTF-rM-NeF"/>
+                        <segue destination="WOD-uA-r1d" kind="relationship" relationship="viewControllers" id="ztI-qF-yzw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiH-gp-sUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-381" y="88"/>
         </scene>
-        <!--Item 1-->
+        <!--New contact-->
         <scene sceneID="xV7-G6-AJ7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JHg-Dm-aLT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="eUk-kR-ebg"/>
+                    <tabBarItem key="tabBarItem" title="New contact" id="eUk-kR-ebg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TNR-mp-TG6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -116,11 +117,36 @@
             </objects>
             <point key="canvasLocation" x="508.69565217391306" y="-215.625"/>
         </scene>
-        <!--Item 2-->
+        <!--map-->
+        <scene sceneID="qO8-ng-v1v">
+            <objects>
+                <viewController id="WOD-uA-r1d" customClass="MapViewController" customModule="Telegramme_week4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OP9-kB-wZp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g3a-bS-vtU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="foI-BI-ld3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="map" id="Zd8-iu-Ud4"/>
+                    <connections>
+                        <outlet property="mapView" destination="g3a-bS-vtU" id="BzO-QI-c95"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYE-2q-VNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356.52173913043481" y="670.3125"/>
+        </scene>
+        <!--Contact list-->
         <scene sceneID="Rt6-FH-G91">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aYe-UV-OBK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ZOB-1z-Sxw"/>
+                    <tabBarItem key="tabBarItem" title="Contact list" id="ZOB-1z-Sxw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2tb-Rz-ACg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

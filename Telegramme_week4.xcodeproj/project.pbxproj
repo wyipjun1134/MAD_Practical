@@ -18,6 +18,7 @@
 		5785C8A1255CD3FD0022AE87 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785C8A0255CD3FD0022AE87 /* Contact.swift */; };
 		5785C8A4255D26630022AE87 /* ShowContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785C8A3255D26630022AE87 /* ShowContactViewController.swift */; };
 		5785C8A7255D30560022AE87 /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785C8A6255D30560022AE87 /* EditContactViewController.swift */; };
+		57B50C1225B9A8B100AB7E5B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B50C1125B9A8B100AB7E5B /* MapViewController.swift */; };
 		57CF8548256F3F90006B46C9 /* Telegramme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57CF8546256F3F90006B46C9 /* Telegramme.xcdatamodeld */; };
 		57CF854B256F443F006B46C9 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CF854A256F443F006B46C9 /* ContactController.swift */; };
 		57CF854E256F8565006B46C9 /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CF854D256F8564006B46C9 /* FriendController.swift */; };
@@ -39,6 +40,7 @@
 		5785C8A0255CD3FD0022AE87 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5785C8A3255D26630022AE87 /* ShowContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowContactViewController.swift; sourceTree = "<group>"; };
 		5785C8A6255D30560022AE87 /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
+		57B50C1125B9A8B100AB7E5B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		57CF8547256F3F90006B46C9 /* Telegramme.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Telegramme.xcdatamodel; sourceTree = "<group>"; };
 		57CF854A256F443F006B46C9 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 		57CF854D256F8564006B46C9 /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				5785C889255CC9C00022AE87 /* ViewController.swift */,
 				5785C88B255CC9C00022AE87 /* Main.storyboard */,
 				5785C89A255CCCE80022AE87 /* content.storyboard */,
+				57B50C1125B9A8B100AB7E5B /* MapViewController.swift */,
 				5785C8A0255CD3FD0022AE87 /* Contact.swift */,
 				57CF8550256F8592006B46C9 /* Friend.swift */,
 				57CF8553256F8B3B006B46C9 /* Message.swift */,
@@ -174,6 +177,7 @@
 				5785C8A7255D30560022AE87 /* EditContactViewController.swift in Sources */,
 				5785C8A1255CD3FD0022AE87 /* Contact.swift in Sources */,
 				5785C886255CC9C00022AE87 /* AppDelegate.swift in Sources */,
+				57B50C1225B9A8B100AB7E5B /* MapViewController.swift in Sources */,
 				5785C8A4255D26630022AE87 /* ShowContactViewController.swift in Sources */,
 				57CF854E256F8565006B46C9 /* FriendController.swift in Sources */,
 				5785C888255CC9C00022AE87 /* SceneDelegate.swift in Sources */,
@@ -327,7 +331,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 888MLP86M8;
 				INFOPLIST_FILE = Telegramme_week4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,7 +351,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 888MLP86M8;
 				INFOPLIST_FILE = Telegramme_week4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
